@@ -1,6 +1,6 @@
 FROM tomcat:latest
 
-COPY ABCtechnologies-1.0.war /usr/local/tomcat/webapps/
+COPY ABCtechnologies-1.0.war abc_tech.war /usr/local/tomcat/webapps/
 
 RUN sed -i 's/port="8080"/port="9090"/g' /usr/local/tomcat/conf/server.xml
 
