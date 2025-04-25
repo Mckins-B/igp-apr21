@@ -48,6 +48,12 @@ pipeline {
                 }
             }
         }
+         stage('Deploy as container') {
+            steps {
+                // Deploy the Docker container locally
+                sh 'docker run -itd -p 8081:8081 --name abcapp ${DOCKER_IMAGE}:latest'
+            }
+        }
 
     }
 }
